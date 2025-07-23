@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .emailSender import EmailSender
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
@@ -8,6 +9,7 @@ def home(request):
    return render(request, 'main/index.html')
 
 
+@csrf_exempt
 def enviarMensagem(request):
     if request.method == 'POST':
         nome = request.POST.get('nome')

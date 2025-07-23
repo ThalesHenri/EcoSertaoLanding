@@ -13,7 +13,10 @@
   
   <header class="header">
     <h1 class="logo"><a href=" " style="text-decoration: none; color:white;">EcoSertão</a></h1>
-    <nav class="nav">
+    
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav class="nav" id="navMenu">
       <ul>
         <li><a href="#carrossel">Como Funciona</a></li>
         <li><a href="#depoimento">Depoimentos</a></li>
@@ -21,6 +24,13 @@
       </ul>
     </nav>
   </header>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('show');
+    }
+  </script>
+
 {% block content %}
   <!-- Hero -->
   <section class="hero">
@@ -57,7 +67,7 @@
       <input type="text" name="nome" placeholder="Seu nome" required>
       <input type="email" name="email" placeholder="Seu e-mail" required>
       <input type="text" name="cnpj" placeholder="Seu CNPJ" required>
-      <input type="number" name="telefone" placeholder="Seu Teleofne" required></textarea>
+      <input type="number" name="telefone" placeholder="Seu Telefone" required></textarea>
       <input type="text" name="Nome Fantasia" placeholder="Nome Fantasia" required>
       <button type="submit">Enviar Dados</button>
     </form>
@@ -74,4 +84,5 @@
   </footer>
 
 </body>
+
 </html>
