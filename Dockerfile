@@ -1,6 +1,6 @@
 # Dockerfile
 FROM python:3.11-slim
-
+#test
 
 # Expõe a porta
 EXPOSE 8080
