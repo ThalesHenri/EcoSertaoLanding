@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-n()aaf+%4#=n_uk9qm^--o8ll^ykrtx*=k4w(#7d9vc#uk8%a%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["34.238.14.225", "app.ecosertao.com.br", "127.0.0.1"]
+ALLOWED_HOSTS = ["0.0.0.0","34.238.14.225", "foodzip.com.br", "127.0.0.1"]
 
 
 # Application definition
