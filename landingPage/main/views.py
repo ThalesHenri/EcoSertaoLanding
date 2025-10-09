@@ -16,11 +16,12 @@ def enviarMensagem(request):
         cnpj = request.POST.get('cnpj')
         telefone = request.POST.get('telefone')
         nomeFantasia = request.POST.get('nomeFantasia')
+        observacoes = request.POST.get('observacoes')
         email = request.POST.get('email')
         carteiro = EmailSender()
         carteiro.startserver()
         subject = f"Cadastro realizado: {nome} ({email})"
-        mensagem = f"Nome: {nome}\nCNPJ: {cnpj}\nTelefone: {telefone}\nNome Fantasia: {nomeFantasia}\nEmail: {email}"
+        mensagem = f"Nome: {nome}\nCNPJ: {cnpj}\nTelefone: {telefone}\nNome Fantasia: {nomeFantasia}\nEmail: {email}\nObservações: {observacoes}"
         carteiro.sendMensage(subject, mensagem)        
 
         
